@@ -1,6 +1,6 @@
 [project]
 name = "mini-persistent-segment-tree"
-version = "0.1.0"
+version = "0.1.1"
 description = "Persistent segment tree supporting range queries across historical array snapshots."
 requires-python = ">=3.10"
 dependencies = []
