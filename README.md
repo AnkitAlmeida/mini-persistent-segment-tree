@@ -39,3 +39,10 @@ raising, matching Python slice semantics, and empty ranges return the combine
 function's identity (default `0`). An empty initial array is supported but
 rejects any update with `IndexError`. Version ids are small integers starting at
 `0`; passing an unknown or negative id raises `VersionNotFound`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
